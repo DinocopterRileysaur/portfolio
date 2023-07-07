@@ -1,0 +1,19 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "A portfolio application meant to display my skills.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/DinocopterRileysaur/portfolio.git"
+  },
+  "author": "Riley Wilkes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DinocopterRileysaur/portfolio/issues"
+  },
+  "homepage": "https://github.com/DinocopterRileysaur/portfolio#readme"
+}
