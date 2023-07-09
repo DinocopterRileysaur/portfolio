@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/DinocopterRileysaur/portfolio/issues"
   },
-  "homepage": "https://github.com/DinocopterRileysaur/portfolio#readme"
+  "homepage": "https://github.com/DinocopterRileysaur/portfolio#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
