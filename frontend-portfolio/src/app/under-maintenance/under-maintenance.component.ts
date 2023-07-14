@@ -20,12 +20,13 @@ export class UnderMaintenanceComponent implements AfterViewInit {
   // Cube Properties
   @Input() public rotationSpeedX: number = 0.01;
   @Input() public rotationSpeedY: number = 0.01;
-  @Input() public zeldaCardboxModel: string = '/assets/traffic_cone.gltf';
+  @Input() public zeldaCardboxModel: string = '/assets/happy_helper.gltf';
   // Stage Properties
-  @Input() public cameraZ: number = 100;
+  @Input() public cameraZ: number = 350;
+  @Input() public cameraY: number = 2;
   @Input() public fieldOfView: number = 1;
-  @Input('nearClipping') public nearClippingPlane: number = 1;
-  @Input('farClipping') public farClippingPlane: number = 1000;
+  @Input('nearClipping') public nearClippingPlane: number = 200;
+  @Input('farClipping') public farClippingPlane: number = 2000;
   // Helper Properties
   private camera!: THREE.PerspectiveCamera;
   private light!: THREE.Light;
@@ -62,8 +63,9 @@ export class UnderMaintenanceComponent implements AfterViewInit {
       }
     );
     //* Camera
-    this.light = new THREE.PointLight(0xffffff, 2, this.cameraZ);
-    //this.light.position.z = this.cameraZ;
+    this.light = new THREE.PointLight(0xffffff, 1.5);
+    this.light.position.z = this.cameraZ * 8;
+    this.light.position.y = this.cameraZ * 2;
     this.scene.add(this.light);
     let aspectRatio = this.getAspectRatio();
     this.camera = new THREE.PerspectiveCamera(
@@ -73,6 +75,7 @@ export class UnderMaintenanceComponent implements AfterViewInit {
       this.farClippingPlane
     );
     this.camera.position.z = this.cameraZ;
+    this.camera.position.y = this.cameraY;
   }
   private getAspectRatio() {
     return this.canvas.clientWidth / this.canvas.clientHeight;
