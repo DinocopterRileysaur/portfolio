@@ -38,6 +38,9 @@ export class UnderMaintenanceComponent implements AfterViewInit {
   private scene!: THREE.Scene;
   private gltfGroup: THREE.Group;
 
+  @Input('loadingPercentage') public loadingPercentage = 0;
+  public show = false;
+
   /**
    * @private
    * @memberof UnderMaintenanceComponent
@@ -52,10 +55,11 @@ export class UnderMaintenanceComponent implements AfterViewInit {
         // called when the resource is loaded
         this.gltfGroup = gltf.scene;
         this.scene.add(gltf.scene);
+        this.show = true;
       },
       (xhr) => {
         // called while loading is progressing
-        console.log(`${(xhr.loaded / xhr.total) * 100}% loaded`);
+        this.loadingPercentage = (xhr.loaded / xhr.total) * 100;
       },
       (error) => {
         // called when loading has errors
