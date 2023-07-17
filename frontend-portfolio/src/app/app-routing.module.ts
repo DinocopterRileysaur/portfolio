@@ -4,7 +4,7 @@ import { UnderMaintenanceComponent } from './under-maintenance/under-maintenance
 
 const routes: Routes = [
   { path: 'under-maintenance', component: UnderMaintenanceComponent },
-  { path: '**', redirectTo: 'under-maintenance' },
+  { path: '**', redirectTo: '/under-maintenance', pathMatch: 'full' },
 ];
 
 @NgModule({
