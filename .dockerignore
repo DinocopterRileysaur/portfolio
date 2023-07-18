@@ -2,3 +2,8 @@
 **/.DS_Store
 **/node_modules
 **/frontend-portfolio
+Dockerfile
+LICENSE
+README.md
+docker_push.ps1
+github_push.bat
