@@ -3,9 +3,7 @@ if ($args[0] -eq $null) {
     Exit
 }
 echo "Building production frontend files"
-cd frontend-portfolio
-ng build --configuration production
-cd ..
+npm run build
 echo "Checking docker process"
 $processes = Get-Process "*docker desktop*"
 if ($processes.Count -lt 1){
@@ -13,6 +11,6 @@ if ($processes.Count -lt 1){
     echo "Starting Docker"
 } else {echo "Docker running"}
 echo "Building image $($args[0])"
-docker build --tag rileysaur/docker-portfolio:$($args[0]) .
+docker build --tag rileysaur/frontend_atq:$($args[0]) .
 echo "Pushing image to repo"
-docker push rileysaur/docker-portfolio:$($args[0])
+docker push rileysaur/frontend_atq:$($args[0])
