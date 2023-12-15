@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Riley's Portfolio
+
+Welcome to my personal portfolio site! This Next.js project is a React application with TypeScript and Tailwind CSS, utilizing Shadcn-UI components, Google Font "Dongle," and Radix-UI icons.
 
 ## Getting Started
 
-First, run the development server:
+To run the development environment, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Clone the repository:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   ```bash
+   git clone https://github.com/your-username/portfolio.git
+   cd portfolio
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. Install dependencies:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+   ```bash
+   npm install
+   ```
 
-## Learn More
+3. Run the development server:
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   npm run dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Visit [http://localhost:3000](http://localhost:3000) in your browser to explore the portfolio.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+Deployment of the project is handled through Docker Hub. Follow these steps to deploy:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Ensure you have Docker installed on your machine.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+2. Create a `.env` file in the project root and set the appropriate environment variables, if needed.
+
+3. Run the deployment script with the desired version as an argument:
+
+   ```bash
+   ./docker_push.ps1 v#.#.#
+   ```
+
+This script builds the production-ready version, creates a Docker container image, and pushes it to Docker Hub at `rileysaur/portfolio`.
+
+## Technologies Used
+
+- Next.js
+- React with TypeScript
+- Tailwind CSS
+- Shadcn-UI components
+- Google Font "Dongle"
+- Radix-UI icons
+
+## Credits
+
+- Shadcn-UI: [Link to Shadcn-UI](https://ui.shadcn.com)
+- Google Fonts: [Link to Dongle](https://fonts.google.com/specimen/Dongle)
+- Radix-UI Icons: [Link to Radix-UI Icons](https://icons.radix-ui.com)
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).

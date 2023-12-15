@@ -17,7 +17,6 @@ import {
 	TooltipProvider,
 	TooltipTrigger,
 } from './ui/tooltip';
-import { cn } from '@/lib/utils';
 import { Label } from './ui/label';
 
 export default function DarkModeToggle() {

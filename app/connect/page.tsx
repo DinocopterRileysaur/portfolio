@@ -1,5 +1,5 @@
 'use client';
-
+// Importing UI components and icons
 import { Label } from '@/components/ui/label';
 import {
 	EnvelopeClosedIcon,
@@ -18,8 +18,10 @@ import {
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
+// Main component for the "About" page
 export default function About() {
 	const router = useRouter();
+	// External links data
 	const externalLinks = [
 		{
 			icon: <EnvelopeClosedIcon className="mr-2 h-4 w-4" />,
@@ -57,10 +59,12 @@ export default function About() {
 				Connect with Riley!
 			</Label>
 
+			{/* Command component for displaying external links */}
 			<Command className="rounded-lg shadow-md text-3xl">
 				<CommandList>
 					<CommandGroup>
 						{...externalLinks.map((link, i) => (
+							// CommandItem for each external link
 							<CommandItem
 								key={i}
 								onSelect={() => router.push(link.url)}
