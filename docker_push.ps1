@@ -11,6 +11,6 @@ if ($processes.Count -lt 1){
     echo "Starting Docker"
 } else {echo "Docker running"}
 echo "Building image $($args[0])"
-docker build --tag rileysaur/frontend_atq:$($args[0]) .
+docker build --tag rileysaur/portfolio:$($args[0]) .
 echo "Pushing image to repo"
-docker push rileysaur/frontend_atq:$($args[0])
+docker push rileysaur/portfolio:$($args[0])
